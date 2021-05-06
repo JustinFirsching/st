@@ -205,7 +205,6 @@ ResourcePref resources[] = {
  * Internal mouse shortcuts.
  * Beware that overloading Button1 will disable the selection.
  */
-const unsigned int mousescrollincrement = 1;
 static MouseShortcut mshortcuts[] = {
 	/* mask                 button   function        argument       release */
 	{ ShiftMask,            Button4, kscrollup,      {.i = 1} },
@@ -216,12 +215,6 @@ static MouseShortcut mshortcuts[] = {
 	{ ShiftMask,            Button5, ttysend,        {.s = "\033[6;2~"} },
 	{ XK_ANY_MOD,           Button5, ttysend,        {.s = "\005"} },
 };
-
-MouseKey mkeys[] = {
- 	/* button               mask            function        argument */
-	{ Button4,				ShiftMask,		kscrollup,		{.i = mousescrollincrement} },
-	{ Button5,				ShiftMask,		kscrolldown,	{.i = mousescrollincrement} },
-}
 
 /* Internal keyboard shortcuts. */
 #define MODKEY Mod1Mask
